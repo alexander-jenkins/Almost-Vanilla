@@ -23,31 +23,31 @@ public class AVItems {
     public static final ArmorItem OAK_BOOTS = new ArmorItem(OAK_ARMOR, EquipmentSlot.FEET, new Item.Settings());
 
     public static void register() {
-        AlmostVanilla.LOGGER.info("Registering items for " + AlmostVanilla.MOD_HUMAN);
+        AlmostVanilla.LOGGER.info("Registering items:");
 
         // debug_item
         Registry.register(Registries.ITEM, new Identifier(AlmostVanilla.MOD_ID, "debug_item"), DEBUG_ITEM);
         ItemGroupEvents.modifyEntriesEvent(AVItemGroup.AV).register(entries -> entries.add(DEBUG_ITEM));
-        AlmostVanilla.LOGGER.info("Registered " + DEBUG_ITEM);
+        AlmostVanilla.LOGGER.info(String.format("- %s:%s", AlmostVanilla.MOD_ID, DEBUG_ITEM));
 
         // oak_helmet
         Registry.register(Registries.ITEM, new Identifier(AlmostVanilla.MOD_ID, "oak_helmet"), OAK_HELMET);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addAfter(Items.LEATHER_BOOTS, OAK_HELMET));
-        AlmostVanilla.LOGGER.info("Registered " + OAK_HELMET);
+        AlmostVanilla.LOGGER.info(String.format("- %s:%s", AlmostVanilla.MOD_ID, OAK_HELMET));
 
         // oak_chestplate
         Registry.register(Registries.ITEM, new Identifier(AlmostVanilla.MOD_ID, "oak_chestplate"), OAK_CHESTPLATE);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addAfter(OAK_HELMET, OAK_CHESTPLATE));
-        AlmostVanilla.LOGGER.info("Registered " + OAK_CHESTPLATE);
+        AlmostVanilla.LOGGER.info(String.format("- %s:%s", AlmostVanilla.MOD_ID, OAK_CHESTPLATE));
 
         // oak_leggings
         Registry.register(Registries.ITEM, new Identifier(AlmostVanilla.MOD_ID, "oak_leggings"), OAK_LEGGINGS);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addAfter(OAK_CHESTPLATE, OAK_LEGGINGS));
-        AlmostVanilla.LOGGER.info("Registered " + OAK_LEGGINGS);
+        AlmostVanilla.LOGGER.info(String.format("- %s:%s", AlmostVanilla.MOD_ID, OAK_LEGGINGS));
 
         // oak_boots
         Registry.register(Registries.ITEM, new Identifier(AlmostVanilla.MOD_ID, "oak_boots"), OAK_BOOTS);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.addAfter(OAK_LEGGINGS, OAK_BOOTS));
-        AlmostVanilla.LOGGER.info("Registered " + OAK_BOOTS);
+        AlmostVanilla.LOGGER.info(String.format("- %s:%s", AlmostVanilla.MOD_ID, OAK_BOOTS));
     }
 }
