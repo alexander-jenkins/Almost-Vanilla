@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "almost_vanilla",
+  "version": "${version}",
+
+  "name": "Almost Vanilla",
+  "description": "This mod introduces things that should already be a part of the base Minecraft game.",
+  "authors": [
+    "Alexander Jenkins"
+  ],
+  "contact": {
+    "homepage": "https://alexjenkins.dev/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/almost_vanilla/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.alexjenkins.almost_vanilla.AlmostVanilla"
+    ],
+    "client": [
+      "dev.alexjenkins.almost_vanilla.AlmostVanillaClient"
+    ]
+  },
+  "mixins": [
+    "almost_vanilla.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+  }
+}
