@@ -7,8 +7,5 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class AVItemGroup {
-    public static final ItemGroup AV = FabricItemGroup.builder(
-            new Identifier(AlmostVanilla.MOD_ID, "av_group"))
-            .icon(() -> new ItemStack(AVItems.DEBUG_ITEM))
-            .build();
+    public static final ItemGroup AV = FabricItemGroup.builder(new Identifier(AlmostVanilla.MOD_ID, "av_group")).icon(() -> new ItemStack(AVItems.DEBUG_ITEM)).build();
 }
